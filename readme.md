@@ -28,6 +28,8 @@ The project is organized into a modular structure where each responsibility is s
 
 ```
 src/
+├── public/
+│   └── models/        # 3D assets (GLTF/GLB)
 ├── Experience/
 │   ├── Utils/
 │   │   ├── EventEmitter.js    # Base class for event handling

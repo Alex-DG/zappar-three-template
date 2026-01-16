@@ -2,6 +2,11 @@
 
 A modular, scalable starter template for creating **WebAR** experiences using **Three.js** and the **Zappar Universal AR SDK**. It follows a class-based architecture to keep the code organized and maintainable.
 
+<p align="center">
+  <img width="300" alt="Demo" src="https://github.com/user-attachments/assets/b2b666f6-e5cb-4010-ad37-f41f63ab6b28" />
+</p>
+
+
 ## Setup
 
 Run the following commands:

@@ -4,6 +4,7 @@ A modular, scalable starter template for creating **WebAR** experiences using **
 
 <p align="center">
   <img width="300" alt="Demo" src="https://github.com/user-attachments/assets/b2b666f6-e5cb-4010-ad37-f41f63ab6b28" />
+  <img width="300" height="300" alt="Zappar_Three_Template-QR_Code" src="https://github.com/user-attachments/assets/5ddce0fb-a0a5-4686-945a-ba87c9cb8c46" />
 </p>
 
 

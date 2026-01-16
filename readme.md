@@ -84,3 +84,25 @@ To add a new object:
 2.  Instantiate it in `World.js`.
 3.  If it needs to be tracked, ensure it adds itself to `experience.world.zapparTracking.instantTrackerGroup` instead of `scene`.
 4.  If it needs animation, give it an `update()` method and call it from `World.update()`.
+
+## ⚙️ Vite Configuration
+
+You might notice some specific configuration in `vite.config.js` under `optimizeDeps`. Here's why it's there:
+
+```javascript
+optimizeDeps: {
+    exclude: ['@zappar/zappar-threejs', '@zappar/zappar-cv'],
+    include: ['ua-parser-js'],
+},
+```
+
+### Why exclude Zappar?
+Zappar's libraries use internal Workers and WebAssembly (WASM) files. Vite's dependency optimizer (esbuild) can sometimes bundle these files incorrectly or mess up the relative paths required to load the worker/WASM files at runtime.
+*   **Error if removed**: `The file does not exist at .../worker?worker_file&type=module`.
+*   **Fix**: Excluding them forces Vite to leave the Zappar packages as-is, allowing the browser to load the worker files correctly from their node_modules location.
+
+### Why include `ua-parser-js`?
+The Zappar library depends on `ua-parser-js`. When we exclude Zappar from optimization, Vite skips processing its dependencies too. However, `ua-parser-js` is often distributed as a CommonJS module, which browsers can't understand natively without bundling.
+*   **Error if removed**: `SyntaxError: Importing binding name 'UAParser' is not found.` (Vite fails to convert the CommonJS export to an ESM import).
+*   **Fix**: Explicitly including it forces Vite to pre-bundle `ua-parser-js` into an ESM-compatible module that Zappar can import without issues.
+

@@ -1,6 +1,7 @@
 # Zappar Three.js Template 🚀
 
-A modular, scalable starter template for creating **WebAR** experiences using **Three.js** and the **Zappar Universal AR SDK**. It follows a class-based architecture to keep the code organized and maintainable.
+- A modular, scalable starter template for creating **WebAR** experiences using **Three.js** and the **Zappar Universal AR SDK**. It follows a class-based architecture to keep the code organized and maintainable.
+- [Zappar Universal SDK + A-FRAME Template](https://github.com/Alex-DG/zappar-three-template)
 
 <p align="center">
   <img width="300" alt="Demo" src="https://github.com/user-attachments/assets/b2b666f6-e5cb-4010-ad37-f41f63ab6b28" />
